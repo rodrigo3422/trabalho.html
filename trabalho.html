@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="RARCenter - Centro de reparação e assistência técnica. Reparamos computadores, telemóveis, tablets e muito mais.">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="RARCenter">
+    <title>RARCenter - Centro de Reparação e Assistência Técnica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="logo">
+                        <h1>RAR<span>Center</span></h1>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#inicio" class="nav-link">Início</a></li>
+                        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                        <li><a href="#orcamento" class="nav-link">Orçamento</a></li>
+                        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        
+        <!-- Services Banner Carousel -->
+        <div class="services-banner-carousel">
+            <div class="banner-slide active">
+                <div class="banner-icon">💻</div>
+                <div class="banner-text">
+                    <h3>Reparação de Computadores</h3>
+                    <p>Portáteis e desktops • Diagnóstico gratuito</p>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <div class="banner-icon">📱</div>
+                <div class="banner-text">
+                    <h3>Reparação de Telemóveis</h3>
+                    <p>Ecrãs, baterias e muito mais • Reparação rápida</p>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <div class="banner-icon">📱</div>
+                <div class="banner-text">
+                    <h3>Reparação de Tablets</h3>
+                    <p>Ecrãs partidos e problemas de hardware</p>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <div class="banner-icon">🖨️</div>
+                <div class="banner-text">
+                    <h3>Reparação de Impressoras</h3>
+                    <p>Manutenção e resolução de problemas</p>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <div class="banner-icon">🎮</div>
+                <div class="banner-text">
+                    <h3>Reparação de Consolas</h3>
+                    <p>Consolas de jogos e controladores</p>
+                </div>
+            </div>
+            <div class="banner-slide">
+                <div class="banner-icon">🔧</div>
+                <div class="banner-text">
+                    <h3>Assistência Técnica</h3>
+                    <p>Suporte técnico e configuração de sistemas</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Centro de Reparação e Assistência Técnica</h2>
+                <p class="hero-subtitle">Especialistas em reparação de equipamentos eletrónicos. Soluções rápidas e profissionais para todos os seus dispositivos.</p>
+                <div class="hero-buttons">
+                    <a href="#orcamento" class="btn btn-primary">Calcular Orçamento</a>
+                    <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Os Nossos Serviços</h2>
+                <p class="section-subtitle">Oferecemos uma gama completa de serviços de reparação e assistência técnica</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Reparação de Computadores</h3>
+                    <p>Reparação de portáteis e desktops, substituição de componentes, limpeza e manutenção preventiva.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Reparação de Telemóveis</h3>
+                    <p>Substituição de ecrãs, baterias, portas de carregamento e reparação de danos por água.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Reparação de Tablets</h3>
+                    <p>Reparação completa de tablets, incluindo ecrãs partidos e problemas de hardware.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🖨️</div>
+                    <h3>Reparação de Impressoras</h3>
+                    <p>Manutenção e reparação de impressoras, substituição de tinteiros e resolução de problemas de conectividade.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎮</div>
+                    <h3>Reparação de Consolas</h3>
+                    <p>Reparação de consolas de jogos, controladores e acessórios relacionados.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Assistência Técnica</h3>
+                    <p>Diagnóstico profissional, instalação de software, configuração de sistemas e suporte técnico remoto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-target="5000">0</div>
+                    <div class="stat-label">Clientes Satisfeitos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔧</div>
+                    <div class="stat-number" data-target="12000">0</div>
+                    <div class="stat-label">Reparações Realizadas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-label">% Satisfação</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Anos de Experiência</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Calculator Section -->
+    <section id="orcamento" class="quote-calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Calculadora de Orçamentos</h2>
+                <p class="section-subtitle">Obtenha uma estimativa rápida do custo da sua reparação</p>
+            </div>
+            <div class="calculator-wrapper">
+                <div class="calculator-form">
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="deviceType">Tipo de Equipamento</label>
+                            <select id="deviceType" name="deviceType" required>
+                                <option value="">Selecione o equipamento</option>
+                                <option value="computador">Computador (Portátil/Desktop)</option>
+                                <option value="telemovel">Telemóvel</option>
+                                <option value="tablet">Tablet</option>
+                                <option value="impressora">Impressora</option>
+                                <option value="consola">Consola de Jogos</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="brandGroup" style="display: none;">
+                            <label for="brand">Marca</label>
+                            <select id="brand" name="brand">
+                                <option value="">Selecione a marca</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="modelGroup" style="display: none;">
+                            <label for="model">Modelo</label>
+                            <select id="model" name="model">
+                                <option value="">Selecione o modelo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="problemType">Tipo de Problema</label>
+                            <select id="problemType" name="problemType" required>
+                                <option value="">Selecione o problema</option>
+                                <option value="ecra">Ecrã Partido/Danificado</option>
+                                <option value="bateria">Problema com Bateria</option>
+                                <option value="agua">Dano por Água</option>
+                                <option value="software">Problema de Software</option>
+                                <option value="hardware">Problema de Hardware</option>
+                                <option value="limpeza">Limpeza e Manutenção</option>
+                                <option value="outro">Outro Problema</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="urgency">Urgência</label>
+                            <select id="urgency" name="urgency" required>
+                                <option value="normal">Normal (3-5 dias)</option>
+                                <option value="urgente">Urgente (1-2 dias)</option>
+                                <option value="express">Express (Mesmo dia)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-calculate">Calcular Orçamento</button>
+                        <button type="reset" class="btn btn-secondary" style="width: 100%; margin-top: 0.5rem;">Limpar</button>
+                    </form>
+                </div>
+                <div class="calculator-result" id="calculatorResult">
+                    <div class="result-placeholder">
+                        <div class="result-icon">💰</div>
+                        <p>Preencha o formulário para calcular o orçamento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O Que Dizem os Nossos Clientes</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Serviço excelente! Repararam o meu portátil em tempo recorde e com um preço justo. Recomendo vivamente!"</p>
+                    <div class="testimonial-author">
+                        <strong>João Silva</strong>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Ecrã do telemóvel reparado em menos de 2 horas. Profissionais competentes e atenciosos. 5 estrelas!"</p>
+                    <div class="testimonial-author">
+                        <strong>Maria Santos</strong>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Melhor centro de reparação da zona! Preços transparentes, serviço rápido e garantia em tudo. Perfeito!"</p>
+                    <div class="testimonial-author">
+                        <strong>Pedro Costa</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-cta">
+                <a href="avaliacao.html" class="btn btn-primary">Deixe a Sua Avaliação</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">Encontre respostas para as questões mais comuns</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo demora uma reparação?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O tempo de reparação varia consoante o tipo de problema. Reparações simples podem ser feitas no mesmo dia, enquanto problemas mais complexos podem levar 3-5 dias úteis. Oferecemos também serviço express para reparações urgentes.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O diagnóstico é gratuito?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! O diagnóstico inicial é sempre gratuito. Só pagará se decidir proceder com a reparação e após aprovação do orçamento.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Oferecem garantia nas reparações?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, todas as nossas reparações incluem garantia. A duração da garantia varia consoante o tipo de reparação, mas normalmente é de 3 a 6 meses.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso acompanhar o estado da minha reparação?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Claro! Fornecemos um número de referência e pode contactar-nos a qualquer momento para saber o estado da sua reparação. Também enviamos atualizações por email ou SMS.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Fazem reparações de todas as marcas?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, trabalhamos com todas as principais marcas de computadores, telemóveis, tablets e outros equipamentos eletrónicos. Se tiver dúvidas sobre a sua marca específica, contacte-nos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre a RARCenter</h2>
+                    <p>A RARCenter é um centro de reparação e assistência técnica especializado, com anos de experiência no mercado. A nossa missão é fornecer soluções rápidas, eficientes e acessíveis para todos os seus problemas técnicos.</p>
+                    <p>Contamos com uma equipa de técnicos qualificados e certificados, prontos para diagnosticar e reparar os seus equipamentos com a máxima qualidade e profissionalismo.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <strong>✓</strong> Diagnóstico Gratuito
+                        </div>
+                        <div class="feature">
+                            <strong>✓</strong> Garantia em Todas as Reparações
+                        </div>
+                        <div class="feature">
+                            <strong>✓</strong> Orçamentos Sem Compromisso
+                        </div>
+                        <div class="feature">
+                            <strong>✓</strong> Reparações Rápidas
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://skyagent-artifacts.skywork.ai/image/1996014634213584896/4134ca28-7329-464b-8031-49d073b12b8a/RARCenter_Storefront_Final_20251203003710_1.png" alt="Interior da loja RARCenter - Centro de Reparação e Assistência Técnica" class="store-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contacto</h2>
+                <p class="section-subtitle">Estamos aqui para ajudar. Entre em contacto connosco hoje mesmo!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h3>Morada</h3>
+                        <p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=R.+José+Júlio+44,+2600-095+Vila+Franca+de+Xira,+Portugal" target="_blank" rel="noopener noreferrer" class="address-link">
+                                R. José Júlio 44 <br>2600-095 Vila Franca de Xira, Portugal
+                            </a>
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h3>Telefone</h3>
+                        <p>+351 21 123 4567</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <h3>Email</h3>
+                        <p>rarcenter@outlook.pt</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🕒</div>
+                        <h3>Horário</h3>
+                        <p>Segunda - Sexta: 9h - 18h<br>Sábado: 10h - 14h</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Tipo de Serviço</label>
+                        <select id="service" name="service" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="computador">Reparação de Computador</option>
+                            <option value="telemovel">Reparação de Telemóvel</option>
+                            <option value="tablet">Reparação de Tablet</option>
+                            <option value="impressora">Reparação de Impressora</option>
+                            <option value="consola">Reparação de Consola</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RARCenter</h3>
+                    <p>O seu centro de reparação e assistência técnica de confiança.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#orcamento">Orçamento</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>+351 21 123 4567</p>
+                    <p>rarcenter@outlook.pt</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Siga-nos</h4>
+                    <div class="social-links">
+                        <a href="facebook.html" aria-label="Facebook">Facebook</a>
+                        <a href="instagram.html" aria-label="Instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RARCenter. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

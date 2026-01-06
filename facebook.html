@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="RARCenter - Siga-nos no Facebook">
+    <meta name="theme-color" content="#1877f2">
+    <title>RARCenter - Facebook</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+
+        .social-header {
+            background: linear-gradient(135deg, #1877f2 0%, #0a66c2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-header p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: #1877f2;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            z-index: 100;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-link:hover {
+            background: #0a66c2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .social-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .post-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .post-header {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .post-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #1877f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .post-info h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #050505;
+        }
+
+        .post-info p {
+            margin: 0.25rem 0 0 0;
+            font-size: 0.875rem;
+            color: #65676b;
+        }
+
+        .post-image {
+            width: 100%;
+            height: auto;
+            min-height: 250px;
+            background: linear-gradient(135deg, #1877f2, #0a66c2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .post-content {
+            padding: 1rem;
+        }
+
+        .post-content p {
+            margin: 0;
+            color: #050505;
+            line-height: 1.6;
+        }
+
+        .post-stats {
+            padding: 0.75rem 1rem;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            font-size: 0.875rem;
+            color: #65676b;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .post-actions {
+            padding: 0.5rem;
+            display: flex;
+            gap: 0;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .post-action {
+            flex: 1;
+            padding: 0.75rem;
+            text-align: center;
+            color: #65676b;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-radius: 4px;
+        }
+
+        .post-action:hover {
+            background: #f0f2f5;
+            color: #1877f2;
+        }
+
+        .info-box {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box h2 {
+            margin-top: 0;
+            color: #1877f2;
+            font-size: 1.5rem;
+        }
+
+        .info-box p {
+            margin: 0.5rem 0;
+            color: #65676b;
+            line-height: 1.6;
+        }
+
+        .follow-button {
+            background: #1877f2;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 44px;
+            margin-top: 1rem;
+        }
+
+        .follow-button:hover {
+            background: #0a66c2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .social-header h1 {
+                font-size: 2rem;
+            }
+
+            .back-link {
+                font-size: 0.9rem;
+                padding: 0.6rem 1rem;
+            }
+
+            .social-content {
+                margin: 1rem auto;
+            }
+
+            .post-card {
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-header {
+                padding: 1.5rem 0;
+            }
+
+            .social-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .social-header p {
+                font-size: 1rem;
+            }
+
+            .back-link {
+                top: 0.5rem;
+                left: 0.5rem;
+                font-size: 0.85rem;
+                padding: 0.5rem 0.75rem;
+            }
+
+            .post-image {
+                min-height: 200px;
+                font-size: 2.5rem;
+            }
+
+            .post-stats {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="trabalho.html" class="back-link">← Voltar</a>
+
+    <div class="social-header">
+        <div class="container">
+            <h1>📘 RARCenter</h1>
+            <p>Facebook - Siga-nos para as últimas novidades e promoções!</p>
+        </div>
+    </div>
+
+    <div class="social-content">
+        <div class="info-box">
+            <h2>Bem-vindo à nossa página do Facebook!</h2>
+            <p><strong>RARCenter</strong> - Centro de Reparação e Assistência Técnica</p>
+            <p>Acompanhe-nos para:</p>
+            <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                <li>Dicas de manutenção de equipamentos</li>
+                <li>Promoções exclusivas</li>
+                <li>Novidades sobre novos serviços</li>
+                <li>Histórias de sucesso dos nossos clientes</li>
+                <li>Atualizações sobre eventos especiais</li>
+            </ul>
+            <button class="follow-button">👍 Seguir Página</button>
+        </div>
+
+        <div class="post-card">
+            <div class="post-header">
+                <div class="post-avatar">📘</div>
+                <div class="post-info">
+                    <h3>RARCenter</h3>
+                    <p>Há 2 dias</p>
+                </div>
+            </div>
+            <div class="post-image">💻</div>
+            <div class="post-content">
+                <p><strong>Promoção Especial Esta Semana!</strong></p>
+                <p style="margin-top: 0.5rem;">Reparação de computadores com desconto de 15% até ao fim da semana. Aproveite agora e traga o seu equipamento ao nosso centro técnico!</p>
+            </div>
+            <div class="post-stats">
+                <span>👍 342 pessoas gostaram</span>
+                <span>💬 28 comentários</span>
+                <span>↗️ 156 partilhas</span>
+            </div>
+            <div class="post-actions">
+                <a class="post-action">👍 Gosto</a>
+                <a class="post-action">💬 Comentar</a>
+                <a class="post-action">↗️ Partilhar</a>
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-header">
+                <div class="post-avatar">📘</div>
+                <div class="post-info">
+                    <h3>RARCenter</h3>
+                    <p>Há 5 dias</p>
+                </div>
+            </div>
+            <div class="post-image">📱</div>
+            <div class="post-content">
+                <p><strong>Dica Importante: Cuidados com a Bateria do seu Telemóvel</strong></p>
+                <p style="margin-top: 0.5rem;">Sabia que manter a bateria do seu telemóvel numa temperatura adequada pode prolongar significativamente a sua vida útil? Evite deixar o seu dispositivo ao sol direto e tente carregar a bateria entre 20% e 80% para melhores resultados!</p>
+            </div>
+            <div class="post-stats">
+                <span>👍 521 pessoas gostaram</span>
+                <span>💬 87 comentários</span>
+                <span>↗️ 234 partilhas</span>
+            </div>
+            <div class="post-actions">
+                <a class="post-action">👍 Gosto</a>
+                <a class="post-action">💬 Comentar</a>
+                <a class="post-action">↗️ Partilhar</a>
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-header">
+                <div class="post-avatar">📘</div>
+                <div class="post-info">
+                    <h3>RARCenter</h3>
+                    <p>Há 1 semana</p>
+                </div>
+            </div>
+            <div class="post-image">🏆</div>
+            <div class="post-content">
+                <p><strong>Obrigado pelos 5000 Seguidores! 🎉</strong></p>
+                <p style="margin-top: 0.5rem;">Atingimos uma marca incrível! Obrigado a todos os nossos clientes leais e seguidores que nos apoiam diariamente. Para celebrar, estamos a preparar uma promoção especial para em breve. Fiquem atentos!</p>
+            </div>
+            <div class="post-stats">
+                <span>👍 1.2K pessoas gostaram</span>
+                <span>💬 156 comentários</span>
+                <span>↗️ 567 partilhas</span>
+            </div>
+            <div class="post-actions">
+                <a class="post-action">👍 Gosto</a>
+                <a class="post-action">💬 Comentar</a>
+                <a class="post-action">↗️ Partilhar</a>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>Informações de Contacto</h2>
+            <p><strong>Endereço:</strong> R. José Júlio 44, 2600-095 Vila Franca de Xira, Portugal</p>
+            <p><strong>Telefone:</strong> +351 21 123 4567</p>
+            <p><strong>Email:</strong> rarcenter@outlook.pt</p>
+            <p><strong>Horário:</strong></p>
+            <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                <li>Segunda - Sexta: 9h - 18h</li>
+                <li>Sábado: 10h - 14h</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

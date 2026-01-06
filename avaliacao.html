@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avalie a RARCenter - Deixe a sua opinião sobre os nossos serviços">
+    <title>Avaliar RARCenter - Centro de Reparação e Assistência Técnica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .evaluation-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 100px 20px 50px;
+        }
+
+        .evaluation-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+        }
+
+        .evaluation-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .evaluation-header h1 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .evaluation-header p {
+            color: var(--text-light);
+            font-size: 1.125rem;
+        }
+
+        .rating-section {
+            margin-bottom: 2rem;
+        }
+
+        .rating-section label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .star {
+            font-size: 2.5rem;
+            color: #e2e8f0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .star:hover,
+        .star.active {
+            color: #fbbf24;
+            transform: scale(1.1);
+        }
+
+        .star-rating-text {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .evaluation-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .evaluation-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .evaluation-form input,
+        .evaluation-form textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .evaluation-form input:focus,
+        .evaluation-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .evaluation-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-back {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-back:hover {
+            background-color: var(--border-color);
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .evaluation-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .evaluation-header h1 {
+                font-size: 2rem;
+            }
+
+            .star {
+                font-size: 2rem;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+
+            .form-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="evaluation-page">
+        <div class="evaluation-container">
+            <div class="evaluation-header">
+                <h1>Avalie a RARCenter</h1>
+                <p>Partilhe a sua experiência connosco</p>
+            </div>
+
+            <form class="evaluation-form" id="evaluationForm">
+                <div class="rating-section">
+                    <label>Avaliação Geral *</label>
+                    <div class="star-rating" id="starRating">
+                        <span class="star" data-rating="1">⭐</span>
+                        <span class="star" data-rating="2">⭐</span>
+                        <span class="star" data-rating="3">⭐</span>
+                        <span class="star" data-rating="4">⭐</span>
+                        <span class="star" data-rating="5">⭐</span>
+                    </div>
+                    <div class="star-rating-text" id="ratingText">Clique nas estrelas para avaliar</div>
+                    <input type="hidden" id="rating" name="rating" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Nome Completo *</label>
+                    <input type="text" id="name" name="name" required placeholder="O seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefone (Opcional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+351 9XX XXX XXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Tipo de Serviço Utilizado *</label>
+                    <select id="service" name="service" required style="width: 100%; padding: 0.875rem; border: 2px solid var(--border-color); border-radius: 8px; font-size: 1rem; font-family: inherit;">
+                        <option value="">Selecione um serviço</option>
+                        <option value="computador">Reparação de Computador</option>
+                        <option value="telemovel">Reparação de Telemóvel</option>
+                        <option value="tablet">Reparação de Tablet</option>
+                        <option value="impressora">Reparação de Impressora</option>
+                        <option value="consola">Reparação de Consola</option>
+                        <option value="assistencia">Assistência Técnica</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Comentário *</label>
+                    <textarea id="comment" name="comment" required placeholder="Partilhe a sua experiência com a RARCenter..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <a href="trabalho.html" class="btn btn-back">Voltar</a>
+                    <button type="submit" class="btn btn-primary">Enviar Avaliação</button>
+                </div>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✅</div>
+                <h2>Obrigado pela sua Avaliação!</h2>
+                <p>A sua opinião é muito importante para nós. A sua avaliação foi enviada com sucesso.</p>
+                <a href="trabalho.html" class="btn btn-secondary" style="margin-top: 1.5rem; display: inline-block; background: rgba(255,255,255,0.2); border-color: white; color: white;">Voltar ao Site</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Star Rating System
+        const stars = document.querySelectorAll('.star');
+        const ratingInput = document.getElementById('rating');
+        const ratingText = document.getElementById('ratingText');
+        const ratingTexts = {
+            1: 'Muito Insatisfeito',
+            2: 'Insatisfeito',
+            3: 'Neutro',
+            4: 'Satisfeito',
+            5: 'Muito Satisfeito'
+        };
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                ratingInput.value = rating;
+                
+                // Update star display
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+                
+                // Update text
+                ratingText.textContent = ratingTexts[rating];
+            });
+
+            star.addEventListener('mouseenter', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.style.color = '#fbbf24';
+                    } else {
+                        s.style.color = '#e2e8f0';
+                    }
+                });
+            });
+        });
+
+        // Reset stars on mouse leave
+        document.getElementById('starRating').addEventListener('mouseleave', function() {
+            const currentRating = parseInt(ratingInput.value) || 0;
+            stars.forEach((s, index) => {
+                if (index < currentRating) {
+                    s.style.color = '#fbbf24';
+                } else {
+                    s.style.color = '#e2e8f0';
+                }
+            });
+        });
+
+        // Form Submission
+        const evaluationForm = document.getElementById('evaluationForm');
+        const successMessage = document.getElementById('successMessage');
+
+        evaluationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate rating
+            if (!ratingInput.value) {
+                alert('Por favor, selecione uma avaliação clicando nas estrelas.');
+                return;
+            }
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would normally send the data to a server
+            // For now, we'll just show the success message
+            console.log('Avaliação enviada:', data);
+            
+            // Hide form and show success message
+            evaluationForm.style.display = 'none';
+            successMessage.classList.add('show');
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // In a real application, you would send this data to your backend:
+            // fetch('/api/evaluation', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify(data)
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+            //     evaluationForm.style.display = 'none';
+            //     successMessage.classList.add('show');
+            // })
+            // .catch(error => {
+            //     alert('Erro ao enviar avaliação. Por favor, tente novamente.');
+            // });
+        });
+    </script>
+</body>
+</html>
+
